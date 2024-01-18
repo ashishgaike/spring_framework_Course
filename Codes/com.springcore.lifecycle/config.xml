@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- bean definitions here -->
+
+
+
+
+	<bean class="com.springcore.lifecycle.Samosa" name="s1"
+		init-method="init" destroy-method="destroy">
+
+		<property name="price" value="10" />
+
+	</bean>
+
+	<bean class="com.springcore.lifecycle.papsi" name="p1">
+		<property name="price" value="5" />
+	</bean>
+
+	<bean class="com.springcore.lifecycle.Example" name="exmple">
+		<property name="subject" value="my name is khan" />
+
+	</bean>
+	
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>
+
+
+
+
+</beans>
